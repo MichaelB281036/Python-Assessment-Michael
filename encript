@@ -1,0 +1,18 @@
+
+password = input("Input password ")
+
+# ROT3 encryption encode
+clearText = password
+charSet="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`~!@#$%^&*()_-=|\}]{[\"':;?/>.<, "
+encText = "".join([charSet[(charSet.find(c)+3)%95] for c in clearText])
+#    print(encText)
+
+print(encText)
+
+# ROT3 encryption decode
+clearText = encText
+charSet="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`~!@#$%^&*()_-=|\}]{[\"':;?/>.<, "
+encText = "".join([charSet[(charSet.find(c)-3)%95] for c in clearText])
+
+print(encText)
+

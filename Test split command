@@ -1,0 +1,9 @@
+print("\nView stored credentials\n")
+f = open("passwordfile.txt", "r")
+password = (f.read())
+print(password)
+x = password.split()
+y = (len(x))
+print(y)
+for z in range(y):
+  print(x[z])
